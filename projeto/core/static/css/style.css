@@ -1,0 +1,24 @@
+/* Adiciona um espaçamento superior ao corpo da página */
+body {
+  margin-top: 60px;
+  font-family: Arial, sans-serif; /* Adiciona uma fonte padrão */
+}
+
+/* Estilo para elementos com a classe 'ok' */
+.ok {
+  color: green;
+  font-weight: bold; /* Adiciona negrito para destaque */
+}
+
+/* Estilo para elementos com a classe 'no' */
+.no {
+  color: red;
+  font-weight: bold; /* Adiciona negrito para destaque */
+}
+
+/* Adiciona um asterisco vermelho após elementos obrigatórios */
+span.required:after {
+  content: "*";
+  color: red;
+  margin-left: 5px; /* Adiciona um pequeno espaçamento à esquerda */
+}

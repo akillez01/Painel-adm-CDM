@@ -1,0 +1,55 @@
+'django-insecure--d=)(*irpio38!0m7+f=^4xt-wz8&@8*5-pluj^a4bcm&^2z7t'
+
+
+sudo apt-get update
+sudo apt-get install build-essential checkinstall
+sudo apt-get install libreadline-gplv2-dev libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev
+
+# Baixe e compile o Python
+cd /usr/src
+sudo wget https://www.python.org/ftp/python/3.12.0/Python-3.12.0.tgz
+sudo tar xzf Python-3.12.0.tgz
+
+cd Python-3.12.0
+sudo ./configure --enable-optimizations
+sudo make altinstall
+
+
+
+
+
+# Remova o ambiente virtual existente
+rm -rf .venv
+
+# Crie um novo ambiente virtual
+python3.12 -m venv .venv
+
+# Ative o ambiente virtual
+source .venv/bin/activate
+
+# Instale as dependências do projeto
+pip install -r requirements.txt
+
+
+
+
+python manage.py makemigrations
+
+
+python manage.py makemigrations estoque
+python manage.py migrate
+
+
+python manage.py runserver
+
+
+python manage.py createsuperuser
+
+ver o q esta no banco
+python manage.py shell
+from projeto.produto.models import Produtos
+Produto.objects.all()
+
+
+
+python create_data.py
