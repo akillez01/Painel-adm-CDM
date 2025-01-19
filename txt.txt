@@ -53,3 +53,8 @@ Produto.objects.all()
 
 
 python create_data.py
+
+
+
+git commit -m "atualizando imagens e cores"
+git push origin main
