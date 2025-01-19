@@ -1,7 +1,10 @@
-<!-- https://github.com/JTruax/bootstrap-starter-template/blob/master/template/start.html -->
-
-<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-  <a class="navbar-brand" href="#">Estoque</a>
+<!-- filepath: /home/achilles/Documentos/Projetos CDM/estoque/projeto/core/templates/includes/nav.html -->
+{% load static %}
+<nav class="navbar navbar-expand-md navbar-custom fixed-top">
+  <a class="navbar-brand" href="#">
+    <img src="{% static 'images/cdm.webp' %}" alt="Logo" class="d-inline-block align-top" style="max-height: 40px;">
+    Estoque Céu das Matas
+  </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>

@@ -1,12 +1,15 @@
+<!-- filepath: /home/achilles/Documentos/Projetos CDM/estoque/projeto/core/templates/index.html -->
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
-<div class="jumbotron">
-  <div class="container">
+<div class="jumbotron" style="background-image: url('{% static 'images/background.jpeg' %}'); background-position: center; background-color:rgb(53, 202, 103);">
+  <div class="container text-center">
+    <img src="{% static 'images/cdm.webp' %}" alt="Logo" class="img-fluid mb-4" style="max-width: 200px;">
     <h1>Bem-vindo!</h1>
     <p>Este é um sistema para controle de estoque.</p>
     <p>
-      <a href="https://github.com/rg3915/estoque">Veja no GitHub</a>
+      <a href="https://github.com/akillez01/Painel-adm-CDM.git" class="btn btn-primary">Veja no GitHub</a>
     </p>
   </div>
 </div>
