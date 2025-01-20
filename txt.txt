@@ -1,3 +1,16 @@
+
+git clone https://github.com/rg3915/estoque.git
+cd estoque
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python contrib/env_gen.py
+python manage.py migrate
+python manage.py createsuperuser
+python manage.py runserver
+
+
+
 'django-insecure--d=)(*irpio38!0m7+f=^4xt-wz8&@8*5-pluj^a4bcm&^2z7t'
 
 
@@ -18,13 +31,16 @@ sudo make altinstall
 
 
 
-# Remova o ambiente virtual existente
+# Desative o ambiente virtual atual
+deactivate
+
+# Remova o ambiente virtual atual
 rm -rf .venv
 
 # Crie um novo ambiente virtual
-python3.12 -m venv .venv
+python3 -m venv .venv
 
-# Ative o ambiente virtual
+# Ative o novo ambiente virtual
 source .venv/bin/activate
 
 # Instale as dependências do projeto
@@ -58,3 +74,64 @@ python create_data.py
 
 git commit -m "atualizando imagens e cores"
 git push origin main
+
+
+
+achillesoliveirasouza
+
+gfvY8304qvUH3X6C
+
+mongodb+srv://achillesoliveirasouza:gfvY8304qvUH3X6C@cluster0.32qwf.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+
+acesso rapido mongo
+achillesdb
+ceudasmatas123
+
+
+
+
+# MongoDB Configuration (connection to MongoDB Atlas)
+MONGO_HOST=cluster0.32qwf.mongodb.net
+MONGO_PORT=27017
+MONGO_USER=achillesoliveirasouza
+MONGO_PASSWORD=gfvY8304qvUH3X6C
+MONGO_AUTH_SOURCE=admin
+MONGO_DB=ceudasmatasdb  # Adicionando nome do banco de dados
+
+# Django Settings
+SECRET_KEY=(7_e3gnu4+)p-h0d32&k9^96-c-7hzm(ta8)+*-dfd$_e)1z*w
+DEBUG=True
+ALLOWED_HOSTS=ceudasmatascontab.onrender.com, .railway.app, .onrender.com, 127.0.0.1, localhost
+
+
+
+
+
+DEBUG=True
+SECRET_KEY=(7_e3gnu4+)p-h0d32&k9^96-c-7hzm(ta8)+*-dfd$_e)1z*w
+ALLOWED_HOSTS=127.0.0.1, .localhost
+#DATABASE_URL=postgres://USER:PASSWORD@HOST:PORT/NAME
+#DEFAULT_FROM_EMAIL=
+#EMAIL_BACKEND=django.core.mail.backends.smtp.EmailBackend
+#EMAIL_HOST=
+#EMAIL_PORT=
+#EMAIL_USE_TLS=
+#EMAIL_HOST_USER=
+#EMAIL_HOST_PASSWORD=
+
+
+python test_mongo_connection.py
+
+
+Inspecionar o uso de recursos
+Se o ambiente está com recursos limitados (CPU ou RAM), o Gunicorn pode não conseguir lidar com a carga. Verifique o consumo de recursos:
+
+bash
+Copiar
+Editar
+htop
+
+
+gunicorn projeto.wsgi:application --log-file -
+
+gunicorn projeto.wsgi:application --log-file - --timeout 60
